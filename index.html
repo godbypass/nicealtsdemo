@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nice Alts - Premium Minecraft Accounts</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>ZZXGP - Premium Alts at Unbeatable Prices</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        :root {
-            --primary: #ffffff;
-            --dark: #121212;
-            --darker: #0a0a0a;
-            --light: #f1f1f1;
-            --gray: #2a2a2a;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
         
         body {
-            background-color: var(--dark);
-            color: var(--light);
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            background-color: #000;
+            color: #fff;
             overflow-x: hidden;
-            min-height: 100vh;
+        }
+        
+        #overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #000;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        #overlay-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(255,255,255,0.5);
+            animation: pulse 2s infinite;
         }
         
         #particles-js {
@@ -36,284 +45,84 @@
             height: 100%;
             top: 0;
             left: 0;
-            z-index: 0;
+            z-index: -1;
         }
         
         .container {
-            position: relative;
-            z-index: 1;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 2rem;
+            text-align: center;
         }
         
         header {
-            padding: 20px 0;
-            border-bottom: 1px solid var(--gray);
+            padding: 2rem 0;
+            animation: fadeIn 1.5s ease-in-out;
         }
         
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
         }
         
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #fff;
         }
         
-        .logo i {
-            margin-right: 10px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .nav-links a {
-            color: var(--light);
+        .discord-btn {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        .auth-buttons {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .btn {
-            padding: 8px 20px;
-            border-radius: 5px;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: none;
-            outline: none;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--darker);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--primary);
-            border: 1px solid var(--primary);
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
         }
         
-        .hero {
-            padding: 80px 0;
-            text-align: center;
+        .discord-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
         }
         
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--primary);
+        .divider {
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #fff, transparent);
+            margin: 2rem auto;
+            opacity: 0.3;
         }
         
-        .hero p {
-            font-size: 18px;
-            color: #aaa;
-            max-width: 700px;
-            margin: 0 auto 40px;
+        .info-section {
+            background: rgba(20, 20, 20, 0.7);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            animation: slideUp 1s ease-in-out;
         }
         
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
+        .info-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: left;
+            color: #fff;
         }
         
-        .feature-card {
-            background-color: var(--darker);
-            border-radius: 10px;
-            padding: 30px;
-            transition: transform 0.3s;
-            border: 1px solid var(--gray);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-        }
-        
-        .feature-card i {
-            font-size: 40px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .feature-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-        
-        .feature-card p {
-            color: #aaa;
-        }
-        
-        .dashboard {
-            display: none;
-            background-color: var(--darker);
-            border-radius: 10px;
-            padding: 30px;
-            margin: 60px 0;
-            border: 1px solid var(--gray);
-        }
-        
-        .dashboard.active {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-        
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--gray);
-        }
-        
-        .dashboard-header h2 {
-            color: var(--primary);
-        }
-        
-        .balance {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 5px;
+        .highlight {
+            color: #ff00cc;
             font-weight: 600;
-        }
-        
-        .generator-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .form-group label {
-            font-weight: 500;
-        }
-        
-        .form-group select, .form-group input {
-            padding: 12px 15px;
-            background-color: var(--dark);
-            border: 1px solid var(--gray);
-            border-radius: 5px;
-            color: var(--light);
-            outline: none;
-        }
-        
-        .form-group select:focus, .form-group input:focus {
-            border-color: var(--primary);
-        }
-        
-        .result {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: var(--dark);
-            border-radius: 5px;
-            border: 1px solid var(--gray);
-            display: none;
-        }
-        
-        .result.active {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-        
-        .result pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-family: monospace;
-        }
-        
-        .auth-form {
-            max-width: 500px;
-            margin: 60px auto;
-            background-color: var(--darker);
-            padding: 40px;
-            border-radius: 10px;
-            border: 1px solid var(--gray);
-            display: none;
-        }
-        
-        .auth-form.active {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-        
-        .auth-form h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--primary);
-        }
-        
-        .auth-form .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .form-footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: var(--darker);
-            color: var(--light);
-            padding: 15px 20px;
-            border-radius: 5px;
-            border-left: 4px solid var(--primary);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transform: translateX(150%);
-            transition: transform 0.3s;
-            z-index: 1000;
-        }
-        
-        .notification.active {
-            transform: translateX(0);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 60px;
-            border-top: 1px solid var(--gray);
-            color: #aaa;
         }
         
         @keyframes fadeIn {
@@ -321,457 +130,171 @@
             to { opacity: 1; }
         }
         
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--light);
-            font-size: 24px;
-            cursor: pointer;
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
-        @media (max-width: 768px) {
-            .nav-links, .auth-buttons {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero p {
-                font-size: 16px;
-            }
-            
-            .mobile-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                height: 100vh;
-                background-color: var(--darker);
-                z-index: 100;
-                transition: right 0.3s;
-                padding: 30px;
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
-                border-left: 1px solid var(--gray);
-            }
-            
-            .mobile-menu.active {
-                right: 0;
-            }
-            
-            .mobile-menu .nav-links {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .mobile-menu .auth-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .mobile-menu-close {
-                align-self: flex-end;
-                background: none;
-                border: none;
-                color: var(--light);
-                font-size: 24px;
-                cursor: pointer;
-            }
-            
-            .mobile-menu-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                z-index: 99;
-                display: none;
-            }
-            
-            .mobile-menu-overlay.active {
-                display: block;
-            }
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
         }
     </style>
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="container">
-        <header>
-            <nav>
-                <div class="logo">
-                    <i class="fas fa-user-secret"></i>
-                    <span>Nice Alts</span>
-                </div>
-                <div class="nav-links">
-                    <a href="#" class="nav-link" data-section="home">Home</a>
-                    <a href="#" class="nav-link" data-section="dashboard">Dashboard</a>
-                </div>
-                <div class="auth-buttons">
-                    <button class="btn btn-outline" id="login-btn">Login</button>
-                    <button class="btn btn-primary" id="register-btn">Register</button>
-                </div>
-                <button class="mobile-menu-btn" id="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </header>
-        
-        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
-        <div class="mobile-menu" id="mobile-menu">
-            <button class="mobile-menu-close" id="mobile-menu-close">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="nav-links">
-                <a href="#" class="nav-link" data-section="home">Home</a>
-                <a href="#" class="nav-link" data-section="dashboard">Dashboard</a>
-            </div>
-            <div class="auth-buttons">
-                <button class="btn btn-outline" id="mobile-login-btn">Login</button>
-                <button class="btn btn-primary" id="mobile-register-btn">Register</button>
-            </div>
-        </div>
-        
-        <section class="hero" id="home-section">
-            <h1>Premium Minecraft Alts</h1>
-            <p>High-quality unbanned accounts with instant delivery and 24/7 support</p>
-            <button class="btn btn-primary" id="get-started-btn">Get Started</button>
-        </section>
-        
-        <div class="features">
-            <div class="feature-card">
-                <i class="fas fa-bolt"></i>
-                <h3>Instant Delivery</h3>
-                <p>Receive your accounts immediately after purchase with our automated system.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Unbanned Accounts</h3>
-                <p>All accounts are carefully checked to ensure they're unbanned on major servers.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-headset"></i>
-                <h3>24/7 Support</h3>
-                <p>Our support team is always available to help with any issues you may have.</p>
-            </div>
-        </div>
-        
-        <div class="dashboard" id="dashboard-section">
-            <div class="dashboard-header">
-                <h2>Account Generator</h2>
-                <div class="balance">Balance: <span id="balance">0</span> credits</div>
-            </div>
-            <div class="generator-form">
-                <div class="form-group">
-                    <label for="account-type">Account Type</label>
-                    <select id="account-type">
-                        <option value="unbanned-nfa">Unbanned NFA</option>
-                        <option value="unbanned-xgp">Unbanned XGP</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" min="1" max="10" value="1">
-                </div>
-                <button class="btn btn-primary" id="generate-btn">Generate Accounts</button>
-            </div>
-            <div class="result" id="result">
-                <pre id="generated-accounts"></pre>
-            </div>
-        </div>
-        
-        <div class="auth-form" id="login-form">
-            <h2>Login</h2>
-            <div class="form-group">
-                <label for="login-username">Username</label>
-                <input type="text" id="login-username" placeholder="Enter your username">
-            </div>
-            <div class="form-group">
-                <label for="login-password">Password</label>
-                <input type="password" id="login-password" placeholder="Enter your password">
-            </div>
-            <button class="btn btn-primary" id="login-submit">Login</button>
-            <div class="form-footer">
-                <p>Don't have an account? <a href="#" id="switch-to-register">Register</a></p>
-            </div>
-        </div>
-        
-        <div class="auth-form" id="register-form">
-            <h2>Register</h2>
-            <div class="form-group">
-                <label for="register-username">Username</label>
-                <input type="text" id="register-username" placeholder="Choose a username">
-            </div>
-            <div class="form-group">
-                <label for="register-password">Password</label>
-                <input type="password" id="register-password" placeholder="Choose a password">
-            </div>
-            <div class="form-group">
-                <label for="register-email">Email</label>
-                <input type="email" id="register-email" placeholder="Enter your email">
-            </div>
-            <button class="btn btn-primary" id="register-submit">Register</button>
-            <div class="form-footer">
-                <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
-            </div>
-        </div>
-        
-        <footer>
-            <p>&copy; 2023 Nice Alts. All rights reserved.</p>
-        </footer>
+    <div id="overlay">
+        <div id="overlay-text">CLICK ME</div>
     </div>
     
-    <div class="notification" id="notification">
-        <div id="notification-message"></div>
+    <audio id="background-audio" src="https://files.catbox.moe/rf921y.mp3" preload="auto"></audio>
+    
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <header>
+            <h1>ZZXGP</h1>
+            <p class="tagline">Your trusted source for premium accounts</p>
+        </header>
+        
+        <a href="https://discord.gg/zzxgp" class="discord-btn">Join Our Discord</a>
+        
+        <div class="divider"></div>
+        
+        <div class="info-section">
+            <div class="info-text">
+                <p>Hello. We're ZZXGP, and we're all about giving you the <span class="highlight">best deals</span> on high quality alts.</p>
+                <p>Right now, we're offering accounts for just <span class="highlight">$0.10/alt</span>, you won't find prices this good anywhere else.</p>
+                <p>What makes us different? For newgens, we are always in <span class="highlight">stock</span>. We restock everyday</p>
+                <p>We've been around for a while now, and our customers keep coming back because we're <span class="highlight">trusted and reliable</span>.</p>
+                <p>Join our Discord and see for yourself why everyone's switching to ZZXGP. The prices are some of the best.</p>
+            </div>
+        </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            particlesJS('particles-js', {
-                particles: {
-                    number: { value: 80, density: { enable: true, value_area: 800 } },
-                    color: { value: "#ffffff" },
-                    shape: { type: "circle" },
-                    opacity: { value: 0.5, random: true },
-                    size: { value: 3, random: true },
-                    line_linked: { enable: false },
-                    move: { 
-                        enable: true, 
-                        speed: 1, 
-                        direction: "none", 
-                        random: true, 
-                        straight: false, 
-                        out_mode: "out" 
+        document.getElementById('overlay').addEventListener('click', function() {
+            this.style.opacity = '0';
+            setTimeout(() => {
+                this.style.display = 'none';
+            }, 1000);
+            
+            const audio = document.getElementById('background-audio');
+            audio.volume = 0.5;
+            audio.play().catch(e => console.error("Audio play failed:", e));
+        });
+
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
                     }
                 },
-                interactivity: {
-                    detect_on: "canvas",
-                    events: {
-                        onhover: { enable: true, mode: "repulse" },
-                        onclick: { enable: true, mode: "push" }
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
                     }
                 }
-            });
-            
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-            const mobileMenuClose = document.getElementById('mobile-menu-close');
-            
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                mobileMenuOverlay.classList.add('active');
-            });
-            
-            mobileMenuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.classList.remove('active');
-            });
-            
-            mobileMenuOverlay.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.classList.remove('active');
-            });
-            
-            const navLinks = document.querySelectorAll('.nav-link');
-            const homeSection = document.getElementById('home-section');
-            const dashboardSection = document.getElementById('dashboard-section');
-            const loginForm = document.getElementById('login-form');
-            const registerForm = document.getElementById('register-form');
-            const loginBtn = document.getElementById('login-btn');
-            const registerBtn = document.getElementById('register-btn');
-            const mobileLoginBtn = document.getElementById('mobile-login-btn');
-            const mobileRegisterBtn = document.getElementById('mobile-register-btn');
-            const getStartedBtn = document.getElementById('get-started-btn');
-            const switchToRegister = document.getElementById('switch-to-register');
-            const switchToLogin = document.getElementById('switch-to-login');
-            const loginSubmit = document.getElementById('login-submit');
-            const registerSubmit = document.getElementById('register-submit');
-            const generateBtn = document.getElementById('generate-btn');
-            const result = document.getElementById('result');
-            const generatedAccounts = document.getElementById('generated-accounts');
-            const notification = document.getElementById('notification');
-            const notificationMessage = document.getElementById('notification-message');
-            const balance = document.getElementById('balance');
-            
-            let currentUser = null;
-            let users = JSON.parse(localStorage.getItem('nicealts_users')) || [];
-            let accounts = {
-                'unbanned-nfa': [
-                    'username:altuser1 | password:password123 | email:alt1@example.com',
-                    'username:altuser2 | password:password123 | email:alt2@example.com',
-                    'username:altuser3 | password:password123 | email:alt3@example.com',
-                    'username:altuser4 | password:password123 | email:alt4@example.com',
-                    'username:altuser5 | password:password123 | email:alt5@example.com'
-                ],
-                'unbanned-xgp': [
-                    'username:xgpalts1 | password:xgppass123 | email:xgp1@example.com',
-                    'username:xgpalts2 | password:xgppass123 | email:xgp2@example.com',
-                    'username:xgpalts3 | password:xgppass123 | email:xgp3@example.com',
-                    'username:xgpalts4 | password:xgppass123 | email:xgp4@example.com',
-                    'username:xgpalts5 | password:xgppass123 | email:xgp5@example.com'
-                ]
-            };
-            
-            function showNotification(message) {
-                notificationMessage.textContent = message;
-                notification.classList.add('active');
-                setTimeout(() => {
-                    notification.classList.remove('active');
-                }, 3000);
-            }
-            
-            function showSection(section) {
-                homeSection.style.display = 'none';
-                dashboardSection.style.display = 'none';
-                loginForm.style.display = 'none';
-                registerForm.style.display = 'none';
-                
-                if (section === 'home') {
-                    homeSection.style.display = 'block';
-                } else if (section === 'dashboard') {
-                    if (currentUser) {
-                        dashboardSection.style.display = 'block';
-                        balance.textContent = currentUser.balance || 0;
-                    } else {
-                        showNotification('Please login to access the dashboard');
-                        showSection('login');
-                    }
-                } else if (section === 'login') {
-                    loginForm.classList.add('active');
-                } else if (section === 'register') {
-                    registerForm.classList.add('active');
-                }
-            }
-            
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const section = link.getAttribute('data-section');
-                    showSection(section);
-                    mobileMenu.classList.remove('active');
-                    mobileMenuOverlay.classList.remove('active');
-                });
-            });
-            
-            loginBtn.addEventListener('click', () => showSection('login'));
-            registerBtn.addEventListener('click', () => showSection('register'));
-            mobileLoginBtn.addEventListener('click', () => {
-                showSection('login');
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.classList.remove('active');
-            });
-            mobileRegisterBtn.addEventListener('click', () => {
-                showSection('register');
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.classList.remove('active');
-            });
-            getStartedBtn.addEventListener('click', () => {
-                showNotification('Please login or register to continue (DEMO)');
-                showSection('login');
-            });
-            switchToRegister.addEventListener('click', (e) => {
-                e.preventDefault();
-                showSection('register');
-            });
-            switchToLogin.addEventListener('click', (e) => {
-                e.preventDefault();
-                showSection('login');
-            });
-            
-            loginSubmit.addEventListener('click', () => {
-                const username = document.getElementById('login-username').value;
-                const password = document.getElementById('login-password').value;
-                
-                const user = users.find(u => u.username === username && u.password === password);
-                
-                if (user) {
-                    currentUser = user;
-                    showNotification('Login successful!');
-                    showSection('dashboard');
-                } else {
-                    showNotification('Invalid username or password (DEMO)');
-                }
-            });
-            
-            registerSubmit.addEventListener('click', () => {
-                const username = document.getElementById('register-username').value;
-                const password = document.getElementById('register-password').value;
-                const email = document.getElementById('register-email').value;
-                
-                if (!username || !password || !email) {
-                    showNotification('Please fill all fields (DEMO)');
-                    return;
-                }
-                
-                if (users.some(u => u.username === username)) {
-                    showNotification('Username already taken (DEMO)');
-                    return;
-                }
-                
-                const newUser = {
-                    username,
-                    password,
-                    email,
-                    balance: 10
-                };
-                
-                users.push(newUser);
-                localStorage.setItem('nicealts_users', JSON.stringify(users));
-                currentUser = newUser;
-                
-                showNotification('Registration successful! You received 10 free credits (DEMO)');
-                showSection('dashboard');
-            });
-            
-            generateBtn.addEventListener('click', () => {
-                if (!currentUser) {
-                    showNotification('Please login to generate accounts');
-                    showSection('login');
-                    return;
-                }
-                
-                const accountType = document.getElementById('account-type').value;
-                const quantity = parseInt(document.getElementById('quantity').value);
-                
-                if (quantity < 1 || quantity > 10) {
-                    showNotification('Please select between 1-10 accounts');
-                    return;
-                }
-                
-                if (currentUser.balance < quantity) {
-                    showNotification('Not enough credits (DEMO)');
-                    return;
-                }
-                
-                const availableAccounts = accounts[accountType];
-                const selectedAccounts = [];
-                
-                for (let i = 0; i < quantity; i++) {
-                    if (availableAccounts.length > 0) {
-                        selectedAccounts.push(availableAccounts[i % availableAccounts.length]);
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
                     }
                 }
-                
-                generatedAccounts.textContent = selectedAccounts.join('\n\n');
-                result.classList.add('active');
-                
-                showNotification(`Generated ${quantity} ${accountType.replace('-', ' ')} accounts (DEMO)`);
-            });
-            
-            showSection('home');
+            },
+            "retina_detect": true
         });
     </script>
 </body>
